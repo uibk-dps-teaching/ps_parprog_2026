@@ -35,7 +35,7 @@ function calc_mandelbrot(image):
 
 1) Open the `mandelbrot/mandelbrot.c` file and implement the sequential `calc_mandelbrot` function with the help of the provided pseudocode.
 2) Check out the generated image `mandelbrot.png` to see if you implemented the algorithm correctly.
-3) Benchmark your program on the LCC3 cluster, document your results and add them to the comparison spreadsheet linked on Discord. How would you improve program performance?
+3) Benchmark your program on the LCC3 cluster, document your results and add them to the comparison spreadsheet linked on Matrix / OLAT. How would you improve program performance?
 4) Can you think of a way to parallelize this algorithm?
 
 ## Exercise 2 (1.5 Points)
@@ -50,7 +50,7 @@ In this exercise, you are asked to investigate the effect of false sharing in mu
 2) Log into the LCC3 cluster, compile the two programs for a problem size of 100 million. (you can upgrade to a newer GCC using `module load gcc/12.2.0-gcc-8.5.0-p4pe45v`). Compare running the two programs with 6 threads on **6 cores of the same processor** or **6 cores on different processors** (use the information from the previous `hwloc` Assignment and the `lstopo` tool). You can control which cores are used by specifying them in a comma-separated list in the environment variable `GOMP_CPU_AFFINITY`, e.g. `OMP_NUM_THREADS=2 GOMP_CPU_AFFINITY=0,1` would run your program using two threads, one on core 0 and one on core 1. What does the execution time show, and why?
 3) Analyze the cache behavior of the two programs using `perf`. `perf` is a tool that can show so-called "performance counter" or "hardware counter" data. It enables you to get hardware count information from the CPU regarding certain events during the execution of your program (clock cycles, cache misses, branch mispredictions, etc.). `perf list` shows a non-exhaustive, short list of events that can be counted on the respective hardware. Compare a general run of `perf stat` to get a high-level overview (i.e. `perf stat <path/to/your/program>`). Can you spot any significant differences in the measurements?
 4) Get more detailed information by specifically looking at cache events, e.g. `perf stat -e LLC-load-misses -e LLC-store-misses <path/to/your/program>` or `perf stat -e L1-dcache-load-misses -e L1-dcache-store-misses <path/to/your/program>`. Can you spot any significant differences? Explain the results.
-5) Enter the wall clock time of each version on LCC3 to the comparison spreadsheet linked on Discord.
+5) Enter the wall clock time of each version on LCC3 to the comparison spreadsheet linked on Matrix / OLAT.
 6) Feel free to also check for this effect on your local machines and report the data (including the CPU type!).
 
 ## General Notes
