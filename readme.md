@@ -32,6 +32,7 @@ for that assignment have to be handed in via OLAT by 17:00 on the previous day
 | 2026-03-10 | [1](01)    | Working on LCC3, hardware architecture                      |
 | 2026-03-17 | [2](02)    | Initial measurements, Amdahl's law                          |
 | 2026-03-24 | [3](03)    | Sequential performance, false sharing                       |
+| 2026-04-14 | [4](04)    | Mandelbrot parallelization, cache effects                   |
 
 ## General Information
 
