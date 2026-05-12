@@ -6,7 +6,7 @@ The goal of this assignment is to expand your knowledge on and familiarity with 
 
 ### Description
 
-In this exercise, you are asked to investigate the effect of first touch in multi-threaded programs, as discussed in lecture part 3-1 OpenMP.
+In this exercise, you are asked to investigate the effect of first touch in multi-threaded programs, as discussed in the lecture.
 
 ### Tasks
 
